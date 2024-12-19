@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
     <div class="container">
@@ -77,7 +77,7 @@
                 expensesList.innerHTML = expenses.map(expense => `
                     <div class="expense-item">
                         <div>${expense.description}</div>
-                        <div>$${expense.amount.toFixed(2)}</div>
+                        <div>₹${expense.amount.toFixed(2)}</div>
                         <div>${expense.category}</div>
                         <div>${new Date(expense.date).toLocaleDateString()}</div>
                         <button class="delete-btn" onclick="deleteExpense(${expense.id})">Delete</button>
